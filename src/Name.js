@@ -1,5 +1,5 @@
 import React from "react";
-import "./Name.css"
+import "./Name.css";
 
 export default class Name extends React.Component {
     constructor(props) {
@@ -17,7 +17,6 @@ export default class Name extends React.Component {
         requestAnimationFrame(
             function draw(time) {
                 let newGradientRotation = (time - animationStart) * this.gradientRotationSpeed;
-                console.log(newGradientRotation);
                 if (newGradientRotation > 360) {
                     this.startGradientAnimation();
                 } else {

@@ -6,10 +6,11 @@ function App() {
   return (
     <div className="App">
       <div className="section fullscreen">
-        <div>
+        <div class="center">
           <p>Hi there, I'm</p>
           <Name></Name>
-          <Button text="Abou me"></Button>
+          <p>A computer science student from Kiev, Ukraine</p>
+          <Button text="About me"></Button>
         </div>
       </div>
       <div class="section fullscreen" id="about-me">

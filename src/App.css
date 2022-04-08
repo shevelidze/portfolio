@@ -6,10 +6,35 @@ html, body {
   font-family: 'Manrope', sans-serif;
 
   --orange-color: #FF6D3F;
+
+  --regular-font-size: 24px;
+  --header1-font-size: 96px;
+  --header2-font-size: 64px;
+}
+
+* {
+  font-size: var(--regular-font-size);
+}
+
+h1 {
+  font-size: var(--header1-font-size);
+}
+
+h2 {
+  font-size: var(--header2-font-size);
+}
+
+@media screen and (max-width: 900px) {
+  html, body {
+    --regular-font-size: 20px;
+    --header1-font-size: 48px;
+    --header2-font-size: 40px;
+  }
 }
 
 .section {
   position: relative;
+  overflow: hidden;
 }
 
 .section * {

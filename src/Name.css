@@ -3,12 +3,16 @@
   clip-path: url(#name-clip);
   width: 413px;
   height: 64px;
+  margin-top: 25px;
+  margin-bottom: 2px;
 }
 
 @media screen and (max-width: 900px) {
   .name-body {
     width: 257.4px;
     height: 39px;
+    margin-top: 15px;
+    margin-bottom: 1px;
   }
 }
 

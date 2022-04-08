@@ -21,6 +21,7 @@ export default class Button extends React.Component {
                 style = {{
                     '--light-left': this.state.lightLeft + 'px',
                 }}
+                onClick={this.props.onClick}
             >
                 <div className={'light ' + (this.state.lightIsVisible ? '' : 'invisible')}></div>
                 <div className="text">{this.props.text}</div>
@@ -30,8 +31,6 @@ export default class Button extends React.Component {
     onMouseMove(event) {
         if (!this.state.lightIsVisible) return;
         let rect = event.target.getBoundingClientRect();
-        console.log(event.clientX - rect.left);
-        console.log(rect.width, rect.height);
         this.setState({
             lightLeft: event.clientX - rect.left
         });

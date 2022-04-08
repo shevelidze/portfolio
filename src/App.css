@@ -5,6 +5,8 @@ html, body {
   color: white;
   font-family: 'Manrope', sans-serif;
 
+  scroll-behavior: smooth;
+
   --orange-color: #FF6D3F;
 
   --regular-font-size: 24px;
@@ -30,6 +32,20 @@ h2 {
     --header1-font-size: 48px;
     --header2-font-size: 40px;
   }
+
+  .text-content {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .text-content .title {
+    text-align: right;
+  }
+
+  .text-content>*:not(:last-child) {
+    margin-right: 190px;
+  }
 }
 
 .section {
@@ -50,4 +66,38 @@ h2 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.orange-gradient-background {
+  background: linear-gradient(296.82deg, #000000 0%, var(--orange-color) 100%);
+}
+
+.text-content {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  text-align: justify;
+}
+
+.text-content>.content>*:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.text-content .title {
+  font-size: var(--header1-font-size);
+  font-weight: 800;
+}
+
+.text-content .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-me-social>*:not(:last-child) {
+  margin-right: 20px;
+}
+
+#about-me-social>* {
+  cursor: pointer;
 }

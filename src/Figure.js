@@ -14,7 +14,6 @@ export default class Figure extends React.Component {
         document.addEventListener('mousemove', this.onMouseMove.bind(this));
     }
     onMouseMove(event) {
-        console.log(event);
         this.setState({
             xOffset: this.maxOffset *
                 (document.documentElement.clientWidth / 2 - event.clientX) /

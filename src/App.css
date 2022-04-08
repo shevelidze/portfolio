@@ -4,10 +4,16 @@ html, body {
   background-color: black;
   color: white;
   font-family: 'Manrope', sans-serif;
+
+  --orange-color: #FF6D3F;
 }
 
 .section {
   position: relative;
+}
+
+.section * {
+  z-index: 1;
 }
 
 .section.fullscreen {

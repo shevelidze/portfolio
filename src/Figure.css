@@ -1,0 +1,8 @@
+.Figure {
+    transform: translate(var(--x-offset), var(--y-offset)) rotate(var(--rotation));
+    transition: transform 0.1s linear;
+    z-index: 0;
+    position: absolute;
+    left: var(--x-position);
+    top: var(--y-position);
+}

@@ -1,5 +1,6 @@
 .name-body {
-  background: conic-gradient(from var(--gradient-rotation) at 43.01% 466.09%, #FFFFFF -60.43deg, #FF6D3F 97.41deg, #FFFFFF 299.57deg, #FF6D3F 457.41deg);;
+  background: conic-gradient(from var(--gradient-rotation) at 43.01% 466.09%, #FFFFFF -16.88deg, #FFFFFF 22.5deg, #FF6D3F 73.13deg, #FFFFFF 127.5deg, #FFFFFF 172.5deg, #3A71FF 181.87deg, #EFFF3A 191.25deg, #FFFFFF 200.63deg, #FFFFFF 225deg, #FF6D3F 298.12deg, #FFFFFF 343.12deg, #FFFFFF 382.5deg);;
+
   width: 413px;
   height: 64px;
   clip-path: url(#name-clip);

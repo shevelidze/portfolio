@@ -4,7 +4,7 @@ import "./Name.css";
 export default class Name extends React.Component {
     constructor(props) {
         super(props);
-        this.gradientRotationSpeed = 0.1;
+        this.gradientRotationSpeed = 0.05;
         this.state = {
             gradientRotation: 0
         };

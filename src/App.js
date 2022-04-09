@@ -3,6 +3,7 @@ import Button from './Button';
 import Name from './Name';
 import Figure from './Figure';
 import React from 'react';
+import ProjectBox from './ProjectBox';
 
 export default class App extends React.Component {
   constructor() {
@@ -56,13 +57,13 @@ export default class App extends React.Component {
             <p>A computer science student from Kiev, Ukraine</p>
             <Button text="About me" onClick={this.scrollToAboutMe.bind(this)}></Button>
           </div>
-          { document.documentElement.clientWidth > this.mobileMaxSize ? desktopMovingStuff : mobileMovingStuff}
+          {document.documentElement.clientWidth > this.mobileMaxSize ? desktopMovingStuff : mobileMovingStuff}
         </div>
         <div className="section fullscreen orange-gradient-background" id="about-me">
           <div className="text-content center">
-            <div className="title">
+            <h1 className="title">
               About me
-            </div>
+            </h1>
             <div className="content">
               <div>
                 I’m Denys Shevel, a 17-years-old
@@ -94,6 +95,15 @@ export default class App extends React.Component {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+        <div className='section' id='my-projects'>
+          <h1>My projects</h1>
+          <div className='content'>
+            <ProjectBox />
+            <ProjectBox />
+            <ProjectBox />
+            <ProjectBox />
           </div>
         </div>
       </div>

@@ -6,3 +6,13 @@
     left: var(--x-position);
     top: var(--y-position);
 }
+
+@keyframes fly {
+    0% {
+        transform: translate(var(--x-offset-frame1), var(--y-offset-frame1)) rotate(var(--rotation));
+    }
+
+    100% {
+        transform: translate(var(--x-offset-frame2), var(--y-offset-frame2)) rotate(var(--rotation));
+    }
+}

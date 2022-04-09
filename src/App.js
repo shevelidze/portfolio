@@ -5,92 +5,37 @@ import Figure from './Figure';
 import React from 'react';
 
 export default class App extends React.Component {
+  constructor() {
+    super();
+    this.figuresQuintity = 0;
+    this.mobileMaxSize = 900;
+  }
+  createFigure(skinIndex, color, xModifier, yModifier, xPosition, yPosition, rotation) {
+    this.figuresQuintity += 1;
+    return <Figure
+      skinIndex={skinIndex}
+      color={color}
+      xModifier={xModifier}
+      yModifier={yModifier}
+      xPosition={xPosition}
+      yPosition={yPosition}
+      rotation={rotation}
+      key={this.figuresQuintity}
+      mobileMaxSize={this.mobileMaxSize}
+    ></Figure>
+  }
   render() {
     let desktopMovingStuff = [
-      <Figure
-        skinIndex={1}
-        color="white"
-        xModifier={-1}
-        yModifier={-1}
-        xPosition="15%"
-        yPosition="25%"
-      ></Figure>,
-      <Figure
-        skinIndex={0}
-        color="var(--orange-color)"
-        xModifier={1}
-        yModifier={-1}
-        xPosition="30%"
-        yPosition="15%"
-      ></Figure>,
-      <Figure
-        skinIndex={2}
-        color="var(--orange-color)"
-        xModifier={1}
-        yModifier={-1}
-        xPosition="20%"
-        yPosition="75%"
-      ></Figure>,
-      <Figure
-        skinIndex={3}
-        color="white"
-        xModifier={-1}
-        yModifier={1}
-        xPosition="50%"
-        yPosition="12%"
-      ></Figure>,
-      <Figure
-        skinIndex={4}
-        color="var(--orange-color)"
-        xModifier={1}
-        yModifier={-1}
-        xPosition="70%"
-        yPosition="15%"
-      ></Figure>,
-      <Figure
-        skinIndex={3}
-        color="var(--orange-color)"
-        xModifier={-1}
-        yModifier={1}
-        xPosition="40%"
-        yPosition="80%"
-        rotation="50deg"
-      ></Figure>,
-      <Figure
-        skinIndex={4}
-        color="white"
-        xModifier={1}
-        yModifier={1}
-        xPosition="65%"
-        yPosition="75%"
-      ></Figure>,
-      <Figure
-        skinIndex={2}
-        color="var(--orange-color)"
-        xModifier={1}
-        yModifier={-1}
-        xPosition="80%"
-        yPosition="80%"
-        rotation="20deg"
-      ></Figure>,
-      <Figure
-        skinIndex={3}
-        color="white"
-        xModifier={1}
-        yModifier={1}
-        xPosition="85%"
-        yPosition="50%"
-        rotation="20deg"
-      ></Figure>,
-      <Figure
-        skinIndex={0}
-        color="white"
-        xModifier={-1}
-        yModifier={1}
-        xPosition="10%"
-        yPosition="50%"
-        rotation="20deg"
-      ></Figure>
+      this.createFigure(1, 'white', -1, -1, '15%', '25%'),
+      this.createFigure(0, 'var(--orange-color)', 1, -1, '30%', '15%'),
+      this.createFigure(2, 'var(--orange-color)', 1, -1, '20%', '75%'),
+      this.createFigure(3, 'white', -1, 1, '50%', '12%'),
+      this.createFigure(4, 'var(--orange-color)', 1, -1, '70%', '15%'),
+      this.createFigure(3, 'var(--orange-color)', -1, 1, '40%', '80%', '50deg'),
+      this.createFigure(4, 'white', 1, 1, '65%', '75%'),
+      this.createFigure(2, 'var(--orange-color)', 1, -1, '80%', '80%', '20deg'),
+      this.createFigure(3, 'white', 1, 1, '85%', '50%', '20deg'),
+      this.createFigure(0, 'white', -1, 1, '10%', '50%'),
     ];
     return (
       <div className="App">

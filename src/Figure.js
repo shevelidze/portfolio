@@ -6,12 +6,19 @@ export default class Figure extends React.Component {
         super();
         this.state = {
             xOffset: 0,
-            yOffset: 0
+            yOffset: 0,
+            animation: null
         }
         this.maxOffset = 20;
     }
     componentDidMount() {
-        document.addEventListener('mousemove', this.onMouseMove.bind(this));
+        if (document.documentElement.clientWidth > this.props.mobileMaxSize) {
+            document.addEventListener('mousemove', this.onMouseMove.bind(this));
+        } else {
+            this.setState({
+                animation: '10s ease infinite alternate fly'
+            });
+        }
     }
     onMouseMove(event) {
         this.setState({
@@ -51,7 +58,12 @@ export default class Figure extends React.Component {
                     '--y-offset': this.state.yOffset + 'px',
                     '--x-position': this.props.xPosition,
                     '--y-position': this.props.yPosition,
-                    '--rotation': rotation
+                    '--rotation': rotation,
+                    '--x-offset-frame1': this.maxOffset * this.props.xModifier + 'px',
+                    '--x-offset-frame2': this.maxOffset * this.props.xModifier * -1 + 'px',
+                    '--y-offset-frame1': this.maxOffset * this.props.yModifier + 'px',
+                    '--y-offset-frame2': this.maxOffset * this.props.yModifier * -1 + 'px',
+                    'animation': this.state.animation
                 }}
                 className="Figure"
             >

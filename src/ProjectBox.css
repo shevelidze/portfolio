@@ -4,6 +4,7 @@
 
     border: 2px solid var(--orange-color);
     margin-bottom: 25px;
+    margin-right: 25px;
 
     background-image: var(--image-url);
     background-size: cover;
@@ -46,9 +47,6 @@
     font-size: 18px;
 }
 
-.info-box>*:nth-child(3) a:hover {
-    text-decoration: underline;
-}
 
 .info-box>*:nth-child(3) {
     display: flex;

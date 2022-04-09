@@ -100,10 +100,42 @@ export default class App extends React.Component {
         <div className='section' id='my-projects'>
           <h1>My projects</h1>
           <div className='content'>
-            <ProjectBox />
-            <ProjectBox />
-            <ProjectBox />
-            <ProjectBox />
+            <ProjectBox
+              imageUrl='/rateyard.png'
+              title='Rateyard'
+              description='A Web gradebook with REST api.'
+              repositoryLink='https://github.com/scriptium/rateyard'
+            />
+            <ProjectBox
+              imageUrl='/snake.png'
+              title='Pysnake'
+              description='A Snake game on Python and pygame.'
+              repositoryLink='https://github.com/shevelidze/pysnake'
+            />
+            <ProjectBox
+              imageUrl='/graphbuilder.png'
+              title='Graphbuilder'
+              description='Graphbuilder on Python and pygame with ability to save a graph to a file.'
+              repositoryLink='https://github.com/shevelidze/graphbuilder'
+            />
+            <ProjectBox
+              imageUrl='/yahtzee.png'
+              title='Yahtzee'
+              description='A dice pocker with a text interface on C++.'
+              repositoryLink='https://github.com/shevelidze/yahtzee'
+            />
+            <ProjectBox
+              imageUrl='/utphoto_bot.png'
+              title='UTphoto bot'
+              description='Telegram bot on Python that can turn photos into a text art.'
+              repositoryLink='https://github.com/shevelidze/utphoto-bot'
+            />
+            <ProjectBox
+              imageUrl='/pong.png'
+              title='Web pong'
+              description='A Web pong on React.js.'
+              repositoryLink='https://github.com/shevelidze/web-ping-pong'
+            />
           </div>
         </div>
         <div className='section orange-gradient-background' id='contacts'>

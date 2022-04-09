@@ -28,11 +28,11 @@ export default class App extends React.Component {
   render() {
     let desktopMovingStuff = [
       this.createFigure(1, 'white', -1, -1, '15%', '25%'),
-      this.createFigure(0, 'var(--orange-color)', 1, -1, '30%', '15%'),
+      this.createFigure(0, 'var(--orange-color)', 1, -1, '40%', '15%'),
       this.createFigure(2, 'var(--orange-color)', 1, -1, '20%', '75%'),
       this.createFigure(3, 'white', -1, 1, '50%', '12%'),
       this.createFigure(4, 'var(--orange-color)', 1, -1, '70%', '15%'),
-      this.createFigure(3, 'var(--orange-color)', -1, 1, '40%', '80%', '50deg'),
+      this.createFigure(3, 'var(--orange-color)', -1, 1, '50%', '90%', '50deg'),
       this.createFigure(4, 'white', 1, 1, '65%', '75%'),
       this.createFigure(2, 'var(--orange-color)', 1, -1, '80%', '80%', '20deg'),
       this.createFigure(3, 'white', 1, 1, '85%', '50%', '20deg'),

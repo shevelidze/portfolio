@@ -43,10 +43,6 @@
 }
 
 .info-box>*:nth-child(3) a {
-    color: white !important;
-    font-weight: 600;
-
-    text-decoration: none;
     font-size: 18px;
 }
 

@@ -23,7 +23,7 @@ export default function ProjectBox(props) {
                         <path d="M7.45649 16.6026C7.47306 16.6874 7.39021 16.7723 7.27422 16.7893C7.15823 16.8063 7.05881 16.7553 7.04224 16.6705C7.02567 16.5856 7.10852 16.5007 7.22451 16.4837C7.3405 16.4667 7.43992 16.5177 7.45649 16.6026Z" fill="white" />
                     </svg>
                     <a href={props.repositoryLink || 'https://github.com/'}>
-                        Go to repository →
+                        Go to the repository →
                     </a>
                 </div>
             </div>

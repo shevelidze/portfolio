@@ -27,16 +27,33 @@ h1 {
 
 h2 {
   font-size: var(--header2-font-size);
+  font-weight: 800;
+}
+
+a {
+  color: white !important;
   font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .section {
   position: relative;
   overflow: hidden;
+  padding: 100px 0;
+  box-sizing: border-box;
 }
 
 .section * {
   z-index: 1;
+}
+
+.section>* {
+  max-width: 1000px;
+  width: 80%;
 }
 
 .section.fullscreen {
@@ -56,8 +73,6 @@ h2 {
 
 .text-content {
   display: flex;
-  width: 80%;
-  max-width: 1000px;
   text-align: justify;
 }
 
@@ -86,16 +101,47 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
 }
 
 #my-projects .content {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
   justify-content: space-between;
-  width: 80%;
 }
+
+#contacts {
+  display: flex;
+  justify-content: space-around;
+}
+
+#contacts>.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+}
+
+#contacts-table {
+  display: grid;
+  grid-template-columns: 70px min(60vw, 500px);
+  grid-auto-rows: 50px;
+  align-items: center;
+}
+
+#contacts-table>* {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#contacts-table>*:nth-child(odd) {
+  justify-self: center;
+}
+
 
 @media screen and (max-width: 900px) {
   html, body {

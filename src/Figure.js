@@ -16,7 +16,7 @@ export default class Figure extends React.Component {
             document.addEventListener('mousemove', this.onMouseMove.bind(this));
         } else {
             this.setState({
-                animation: '10s ease infinite alternate fly'
+                animation: '10s linear infinite alternate fly'
             });
         }
     }

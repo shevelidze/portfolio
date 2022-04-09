@@ -37,6 +37,16 @@ export default class App extends React.Component {
       this.createFigure(3, 'white', 1, 1, '85%', '50%', '20deg'),
       this.createFigure(0, 'white', -1, 1, '10%', '50%'),
     ];
+    let mobileMovingStuff = [
+      this.createFigure(1, 'white', -1, -1, '10%', '10%'),
+      this.createFigure(0, 'var(--orange-color)', 1, -1, '20%', '25%'),
+      this.createFigure(2, 'var(--orange-color)', 1, -1, '20%', '75%'),
+      this.createFigure(3, 'white', -1, 1, '65%', '25%'),
+      this.createFigure(4, 'var(--orange-color)', 1, -1, '65%', '10%'),
+      this.createFigure(3, 'var(--orange-color)', -1, 1, '40%', '80%', '50deg'),
+      this.createFigure(4, 'white', 1, 1, '65%', '60%'),
+      this.createFigure(2, 'var(--orange-color)', 1, -1, '80%', '80%', '20deg'),
+    ]
     return (
       <div className="App">
         <div className="section fullscreen">
@@ -46,7 +56,7 @@ export default class App extends React.Component {
             <p>A computer science student from Kiev, Ukraine</p>
             <Button text="About me" onClick={this.scrollToAboutMe.bind(this)}></Button>
           </div>
-          {desktopMovingStuff}
+          { document.documentElement.clientWidth > this.mobileMaxSize ? desktopMovingStuff : mobileMovingStuff}
         </div>
         <div className="section fullscreen orange-gradient-background" id="about-me">
           <div className="text-content center">

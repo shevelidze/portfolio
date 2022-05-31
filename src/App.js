@@ -200,7 +200,7 @@ export default class App extends React.Component {
                                 fill="white"
                             />
                         </svg>
-                        <a href="/CV_Denys_Shevel.pdf">Resume</a>
+                        <a href="/CV Denys Shevel.pdf">Resume</a>
                         <svg
                             width="49"
                             height="31"

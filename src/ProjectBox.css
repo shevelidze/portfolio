@@ -14,7 +14,7 @@
 }
 
 .info-box {
-    background: rgba(255, 109, 63, 0.5);
+    background: rgba(196, 69, 31, 0.8);
     --padding: 15px;
     padding: var(--padding);
 
